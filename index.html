@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&family=Sen:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/dbed919da4.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="src/css/style.css" />
+
+    <title>MovieMojo</title>
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <nav class="navbar">
+      <div class="navbar_container">
+        <div class="nav_logo">
+          <img src="img/movielogo4.png" alt="" />
+        </div>
+        <div class="nav_menu">
+          <ul class="menu_list">
+            <li class="menu_list_item">Home</li>
+            <!-- {{!--
+            <li>Genre</li>
+            --}} -->
+            <li class="menu_list_item">
+              <a href="#movies" class="movie">Movies</a>
+            </li>
+            <li class="menu_list_item">Series</li>
+            <li class="menu_list_item">
+              <a href="#popular" class="populars">Popular</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="nav_profilesearch">
+          <div class="search_container">
+            <form action="" id="search_bar">
+              <input
+                class="searchbar"
+                type="search"
+                placeholder="Search"
+                id="search"
+                autocomplete="off"
+              />
+            </form>
+
+            <!-- <button class="search_btn" type="submit">
+              <i class="fa fa-search"></i>
+            </button> -->
+          </div>
+          <div class="toggle">
+            <i class="fas fa-moon toggle_icon"></i>
+            <i class="fas fa-sun toggle_icon"></i>
+            <div class="toggle_ball"></div>
+          </div>
+          <div class="btn_container">
+            <button class="btn_login">Login</button>
+          </div>
+          <div class="nav-btn">
+            <label for="nav-check">
+              <span></span>
+              <span></span>
+              <span></span>
+            </label>
+          </div>
+
+          <div class="nav-links">
+            <a href="#movies" target="_blank" class="nav-links-item">Movies</a>
+            <a href="#populars" target="_blank" class="nav-links-item"
+              >Popular</a
+            >
+            <a href="#series" target="_blank" class="nav-links-item">Series</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="sidebar">
+      <i class="sidebar_icon fa-solid fa-house" id="home_user"></i>
+      <i class="sidebar_icon fa-solid fa-user" id="user"></i>
+      <i class="sidebar_icon fa-solid fa-bookmark" id="bookmark"></i>
+      <i class="sidebar_icon fa-solid fa-clapperboard" id="play"></i>
+      <i class="sidebar_icon fa-solid fa-tv" id="tv"></i>
+      <i class="sidebar_icon fa-solid fa-ellipsis" id="setting"></i>
+    </div>
+
+    <div class="container">
+      <div class="content_container">
+        <div class="fetured_movies" id="sliderContainer">
+          <div class="slider fade">
+            <img src="img/img1.jpg" />
+            <div class="text_content">
+              <h2>Oppenheimer</h2>
+              <p class="movie_Desc">
+                Oppenheimer full movie online on FMovies. The story of J. Robert
+                Oppenheimer’s role in the development of the atomic bomb during
+                World War II..
+              </p>
+            </div>
+          </div>
+
+          <div class="slider fade">
+            <img src="img/img2.jpg" />
+            <div class="text_content">
+              <h2>Barbie</h2>
+              <p class="movie_Desc">
+                "Barbie and Ken are having the time of their lives in the
+                colorful and seemingly perfect world of Barbie Land. However,
+                when they get a chance to go to the real world, they soon
+                discover the joys and perils of living among humans."
+              </p>
+            </div>
+          </div>
+
+          <div class="slider fade">
+            <img src="img/img3.jpeg" />
+            <div class="text_content">
+              <h2>The Flash</h2>
+              <p class="movie_Desc">
+                When his attempt to save his family inadvertently alters the
+                future, Barry Allen becomes trapped in a reality in which
+                General Zod has returned and there are no Super Heroes to turn
+                to. In order to save the world that he is in and return to the
+                future that he knows, Barry's only hope is to race for his life.
+                But will making the ultimate sacrifice be enough to reset the
+                universe?
+              </p>
+            </div>
+          </div>
+
+          <div class="slider fade">
+            <img src="img/img4.jpg" />
+            <div class="text_content">
+              <h2>Mission: Impossible – Dead Reckoning Part One</h2>
+              <p class="movie_Desc">
+                Ethan Hunt and the IMF team must track down a terrifying new
+                weapon that threatens all of humanity if it falls into the wrong
+                hands. With control of the future and the fate of the world at
+                stake, a deadly race around the globe begins.
+              </p>
+            </div>
+          </div>
+          <div style="text-align: center" class="dot_container">
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+            <span class="dot"></span>
+          </div>
+        </div>
+
+        <div class="movie_list_container" id="movies">
+          <h1 class="movie_list_title">New Releases</h1>
+          <div class="movie_list_wrapper">
+            <div class="movie_list" id="main">
+              <div class="movie_list_item">
+                <img class="movie_list_item_img" src="img/img5.jpg" alt="" />
+                <span class="movie_item_title">Oppenheimer</span>
+                <p class="movie_item_desc">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Sapiente, asperiores eaque! Earum laboriosam omnis repudiandae
+                  ipsum, saepe impedit molestias .
+                </p>
+                <button class="movie_item_btn">Watch</button>
+              </div>
+              <div class="movie_list_item">
+                <img class="movie_list_item_img" src="img/img5.jpg" alt="" />
+                <span class="movie_item_title">Oppenheimer</span>
+                <p class="movie_item_desc">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Sapiente, asperiores eaque! Earum laboriosam omnis repudiandae
+                  ipsum, saepe impedit molestias.
+                </p>
+                <button class="movie_item_btn">Watch</button>
+              </div>
+              <div class="movie_list_item">
+                <img class="movie_list_item_img" src="img/img5.jpg" alt="" />
+                <span class="movie_item_title">Oppenheimer</span>
+                <p class="movie_item_desc">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Sapiente, asperiores eaque! Earum laboriosam omnis repudiandae
+                  ipsum, saepe impedit molestias .
+                </p>
+                <button class="movie_item_btn">Watch</button>
+              </div>
+              <div class="movie_list_item">
+                <img class="movie_list_item_img" src="img/img5.jpg" alt="" />
+                <span class="movie_item_title">Oppenheimer</span>
+                <p class="movie_item_desc">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Sapiente, asperiores eaque! Earum laboriosam omnis repudiandae
+                  ipsum, saepe impedit molestias.
+                </p>
+                <button class="movie_item_btn">Watch</button>
+              </div>
+              <div class="movie_list_item">
+                <img class="movie_list_item_img" src="img/img5.jpg" alt="" />
+                <span class="movie_item_title">Oppenheimer</span>
+                <p class="movie_item_desc">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Sapiente, asperiores eaque! Earum laboriosam omnis repudiandae
+                  ipsum, saepe impedit molestias.
+                </p>
+                <button class="movie_item_btn">Watch</button>
+              </div>
+              <div class="movie_list_item">
+                <img class="movie_list_item_img" src="img/img5.jpg" alt="" />
+                <span class="movie_item_title">Oppenheimer</span>
+                <p class="movie_item_desc">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Sapiente, asperiores eaque! Earum laboriosam omnis repudiandae
+                  ipsum, saepe impedit molestias.
+                </p>
+                <button class="movie_item_btn">Watch</button>
+              </div>
+              <div class="movie_list_item">
+                <img class="movie_list_item_img" src="img/img5.jpg" alt="" />
+                <span class="movie_item_title">Oppenheimer</span>
+                <p class="movie_item_desc">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Sapiente, asperiores eaque! Earum laboriosam omnis repudiandae
+                  ipsum, saepe impedit molestias.
+                </p>
+                <button class="movie_item_btn">Watch</button>
+              </div>
+            </div>
+
+            <i class="fa-solid fa-chevron-right arrow"></i>
+          </div>
+        </div>
+
+        <div class="popular_list_container" id="popular">
+          <h1>Popular Movies</h1>
+          <div class="popular_list_wrapper">
+            <div class="popular_list" id="main_list">
+              <div class="popular_movie">
+                <img src="img/img1.jpg" alt="" />
+                <div class="movie_info">
+                  <h3 class="movideTitl">Movie Title</h3>
+                  <span class="green">9.8</span>
+                </div>
+                <div class="overview">
+                  <h3>overview</h3>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Distinctio eius magni illo inventore quaerat aperiam labore
+                  ullam neque porro numquam!
+                </div>
+              </div>
+
+              <div class="popular_movie">
+                <img src="img/img1.jpg" alt="" />
+                <div class="movie_info">
+                  <h3 class="movideTitl">Movie Title</h3>
+                  <span class="green">9.8</span>
+                </div>
+                <div class="overview">
+                  <h3>overview</h3>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Distinctio eius magni illo inventore quaerat aperiam labore
+                  ullam neque porro numquam!
+                </div>
+              </div>
+
+              <div class="popular_movie">
+                <img src="img/img1.jpg" alt="" />
+                <div class="movie_info">
+                  <h3 class="movideTitl">Movie Title</h3>
+                  <span class="green">9.8</span>
+                </div>
+                <div class="overview">
+                  <h3>overview</h3>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Distinctio eius magni illo inventore quaerat aperiam labore
+                  ullam neque porro numquam!
+                </div>
+              </div>
+
+              <div class="popular_movie">
+                <img src="img/img1.jpg" alt="" />
+                <div class="movie_info">
+                  <h3 class="movideTitl">Movie Title</h3>
+                  <span class="green">9.8</span>
+                </div>
+                <div class="overview">
+                  <h3>overview</h3>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Distinctio eius magni illo inventore quaerat aperiam labore
+                  ullam neque porro numquam!
+                </div>
+              </div>
+
+              <div class="popular_movie">
+                <img src="img/img1.jpg" alt="" />
+                <div class="movie_info">
+                  <h3 class="movideTitl">Movie Title</h3>
+                  <span class="green">9.8</span>
+                </div>
+                <div class="overview">
+                  <h3>overview</h3>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Distinctio eius magni illo inventore quaerat aperiam labore
+                  ullam neque porro numquam!
+                </div>
+              </div>
+
+              <div class="popular_movie">
+                <img src="img/img1.jpg" alt="" />
+                <div class="movie_info">
+                  <h3 class="movideTitl">Movie Title</h3>
+                  <span class="green">9.8</span>
+                </div>
+                <div class="overview">
+                  <h3>overview</h3>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Distinctio eius magni illo inventore quaerat aperiam labore
+                  ullam neque porro numquam!
+                </div>
+              </div>
+
+              <div class="popular_movie">
+                <img src="img/img1.jpg" alt="" />
+                <div class="movie_info">
+                  <h3 class="movideTitl">Movie Title</h3>
+                  <span class="green">9.8</span>
+                </div>
+                <div class="overview">
+                  <h3>overview</h3>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Distinctio eius magni illo inventore quaerat aperiam labore
+                  ullam neque porro numquam!
+                </div>
+              </div>
+
+              <div class="popular_movie">
+                <img src="img/img1.jpg" alt="" />
+                <div class="movie_info">
+                  <h3 class="movideTitl">Movie Title</h3>
+                  <span class="green">9.8</span>
+                </div>
+                <div class="overview">
+                  <h3>overview</h3>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Distinctio eius magni illo inventore quaerat aperiam labore
+                  ullam neque porro numquam!
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="myNav" class="overlay">
+      <!-- Button to close the overlay navigation -->
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+        >&times;</a
+      >
+
+      <!-- Overlay content -->
+      <div class="overlay-content" id="overlayContent"></div>
+    </div>
+
+    <script src="src/js/app.js"></script>
+  </body>
+</html>
