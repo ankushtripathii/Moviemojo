@@ -1,0 +1,749 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+}
+.navbar {
+  width: 100%;
+  height: 60px;
+  background-color: #191a1f;
+  font-family: "Sen", sans-serif;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.navbar_container {
+  display: flex;
+  align-items: center;
+  padding: 0 50px;
+  height: 100%;
+  color: #20a0ff;
+}
+.nav_logo {
+  flex: 1;
+}
+.nav_logo img {
+  width: 170px;
+  height: 45px;
+}
+
+.nav_menu {
+  flex: 6;
+}
+.menu_list {
+  list-style: none;
+  display: flex;
+}
+.menu_list_item {
+  cursor: pointer;
+  font-size: 15px;
+  margin-right: 60px;
+}
+.menu_list_item:hover {
+  text-decoration: underline;
+}
+.menu_list_item:nth-child(1) {
+  color: rgb(107, 104, 104);
+  margin-left: 5px;
+}
+.movie {
+  text-decoration: none;
+  color: #20a0ff;
+}
+.populars {
+  text-decoration: none;
+  color: #20a0ff;
+}
+
+/*  */
+.nav-btn {
+  display: none;
+}
+.nav-links {
+  display: none;
+  float: right;
+  font-size: 18px;
+}
+
+/* .nav-links > a {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+} */
+.nav-links-item {
+  display: inline-block;
+  padding: 13px 10px 13px 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-links > a:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 600px) {
+  .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 30px;
+    top: 0px;
+  }
+
+  .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+    cursor: pointer;
+  }
+  .nav-btn > label:hover .nav-btn > label {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+  .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid #0079fb;
+  }
+
+  .nav-links {
+    position: absolute;
+    display: none;
+    width: 100%;
+    background-color: #27c3f867;
+    height: 0px;
+    transition: all 0.3s ease-in;
+    overflow-y: hidden;
+    top: 50px;
+    left: 0px;
+  }
+  .nav-links > a {
+    display: block;
+    width: 100%;
+  }
+  .nav-links {
+    height: 0px;
+  }
+  .nav-links {
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+  }
+}
+/* tags */
+
+.nav_profilesearch {
+  flex: 7;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.search_container {
+  margin: 0 20px;
+}
+
+.searchbar {
+  width: 360px;
+  padding: 10px;
+  background-color: #1e2129;
+  color: white;
+  border: 1px solid rgba(116, 165, 243, 0.924);
+  border-radius: 10px;
+}
+.searchbar::placeholder {
+  color: #209eff73;
+}
+.searchbar:focus {
+  outline: 0;
+  background-color: #3d3c3c;
+}
+/* .search_btn {
+    padding: 7px 10px;
+  
+    background: #ddd;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+  } */
+.btn_container {
+  margin-left: 50px;
+}
+
+.btn_login {
+  width: 85px;
+  margin-left: 20px;
+  padding: 9px;
+  border-radius: 10px;
+  color: white;
+  background-color: #20a0ff;
+  font-size: 15px;
+
+  border: none;
+  cursor: pointer;
+}
+.btn_login:hover {
+  background-color: #0375cb;
+}
+.toggle {
+  width: 50px;
+  height: 25px;
+  background-color: white;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+}
+.toggle_icon {
+  color: gold;
+}
+.toggle_ball {
+  width: 21px;
+  height: 21px;
+  background-color: black;
+  position: absolute;
+  right: 1px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 1s ease;
+}
+/*  */
+.sidebar {
+  background-color: #191a1f;
+
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+  height: 100vh;
+  width: 4rem;
+  text-align: center;
+  padding: 1rem 0.5rem;
+  padding-right: 1.5rem;
+  position: fixed;
+  z-index: 104;
+}
+.sidebar_icon {
+  color: #20a0ff;
+  font-size: 20px;
+  margin-bottom: 60px;
+  cursor: pointer;
+}
+.sidebar_icon:hover {
+  font-size: 25px;
+  transition: all 1 ease-in-out;
+  color: #008af4;
+}
+.sidebar_icon:nth-child(6) {
+  margin-top: 90px;
+}
+
+.container {
+  /* background-color: #151515; */
+  background-color: #1e2129;
+  min-height: 580vh;
+  background-position: top;
+  background-repeat: repeat-x;
+  background-size: 160vh;
+}
+
+.content_container {
+  margin: auto;
+  max-width: 70%;
+  padding-top: 20px;
+  color: white;
+}
+.fetured_movies {
+  position: relative;
+  margin: auto;
+  height: 80vh;
+  box-shadow: -5px 0px 41px 6px rgba(0, 0, 0, 0.2);
+  /* box-shadow: -5px -2px 24px 9px rgba(244, 245, 241, 0.3); */
+
+  cursor: pointer;
+}
+.slider {
+  display: none;
+  position: relative;
+}
+.slider img {
+  object-fit: cover;
+  width: 100%;
+  height: 80vh;
+}
+.slider:hover .text_content {
+  opacity: 1;
+}
+
+.text_content {
+  color: #ffffff;
+  font-size: 15px;
+  padding: 2px 12px;
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  text-align: center;
+  background: #209effe7;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+  /* background-color: #81a3ed; */
+}
+.text_content h2 {
+  padding-bottom: 3px;
+  text-decoration: underline;
+}
+.text_content p {
+  margin: 10px;
+}
+.dot_container {
+  position: relative;
+  bottom: 24px;
+  text-align: center;
+}
+.dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  border: 2px solid white;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #ffffff;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* wrapper */
+.movie_list_container {
+  position: relative;
+  width: 94vw;
+  top: 80px;
+  right: 180px;
+  padding: 0 20px;
+}
+
+.movie_list_title {
+  /* margin-top: 80px; */
+  background-color: #3d3c3cb9;
+  padding-left: 5px;
+  color: #20a0ff;
+}
+.movie_list_wrapper {
+  position: relative;
+  overflow: hidden;
+}
+.movie_list {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  height: 300px;
+  /* border: 2px solid red; */
+
+  transform: translateX(0);
+  transition: all 1s ease-in-out;
+}
+.movie_list_item {
+  /* width: 300px; */
+  margin-right: 10px;
+  position: relative;
+}
+
+.movie_list_item:hover .movie_list_item_img {
+  transform: scale(1.2);
+  margin: 10px;
+  /* opacity: 0.5; */
+  cursor: pointer;
+}
+
+.movie_list_item_img {
+  transition: all 1s ease-in-out;
+  width: 160px;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 20px;
+  /* animation: slideAnimation 10s linear infinite; */
+}
+
+.movie_item_title {
+  background-color: rgb(52, 51, 51);
+  padding: 0 8px;
+  font-size: 22px;
+  font-weight: bold;
+  position: absolute;
+  top: 10%;
+  left: 40px;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+.movie_item_desc {
+  background-color: rgb(52, 51, 51);
+  padding: 8px;
+  font-size: 12px;
+  position: absolute;
+  top: 30%;
+  left: 40px;
+  width: 220px;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+.movie_item_btn {
+  cursor: pointer;
+
+  padding: 10px;
+  border-radius: 10px;
+  background-color: rgb(0, 166, 255);
+  outline: none;
+  border: none;
+  color: white;
+  position: absolute;
+  bottom: 20px;
+  left: 40px;
+  opacity: 0;
+  transition: all 1s ease-in-out;
+}
+
+/* arrow */
+
+.arrow {
+  font-size: 70px;
+  position: absolute;
+  top: 110px;
+  right: 0;
+  color: rgba(117, 115, 115, 0.878);
+  cursor: pointer;
+}
+.popular_list_container {
+  position: relative;
+  width: 94vw;
+  top: 80px;
+  right: 160px;
+  background-color: #1e2129;
+}
+.popular_list_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 40px;
+}
+.popular_list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.popular_list_container h1 {
+  padding-left: 5px;
+  width: 91.5vw;
+  background-color: #3d3c3cb9;
+  color: #20a0ff;
+}
+.popular_movie {
+  width: 300px;
+  margin: 1rem;
+  padding-top: 50px;
+  box-shadow: 0.2px 4px 5px rgb(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.popular_movie img {
+  width: 100%;
+}
+
+.movie_info {
+  color: rgb(0, 225, 255);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+}
+.movie_info h3 {
+  margin-top: 0;
+}
+.movie_info span {
+  background-color: #3d3c3c;
+  padding: 0.25rem 0.5rem;
+  border-radius: 3px;
+  font-weight: bold;
+}
+.overview {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  color: black;
+  background-color: rgb(255, 255, 255);
+  padding: 1rem;
+  max-height: 100%;
+  transform: translateY(101%);
+  transition: transform 0.3s ease-in;
+}
+.overview h3 {
+  margin-bottom: 10px;
+  color: #20a0ff;
+}
+.popular_movie:hover .overview {
+  transform: translateY(0);
+}
+
+/* trailer button */
+.trailer {
+  background-color: orangered;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: 0;
+  padding: 10px 20px;
+  margin-top: 7px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.trailer:hover {
+  background-color: rgb(247, 115, 68);
+}
+
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(17, 216, 251); /* Black fallback color */
+  background-color: rgba(57, 255, 252, 0.411); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #000000;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover,
+.overlay a:focus {
+  color: #f1f1f1;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+.embed.hide {
+  display: none;
+}
+.embed.show {
+  display: inline-block;
+}
+
+/* light mode */
+
+.container.active {
+  background-color: rgb(255, 255, 255);
+}
+.movie.active {
+  color: black;
+}
+.populars.active {
+  color: black;
+}
+
+.navbar_container.active {
+  background-color: white;
+  color: rgb(0, 0, 0);
+}
+
+.searchbar.active {
+  background-color: #f4f7fe;
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(0, 0, 0);
+}
+.searchbar.active::placeholder {
+  color: #000000e3;
+}
+body.active {
+  background-color: white;
+}
+.sidebar.active {
+  background-color: white;
+}
+.sidebar_icon.active {
+  color: black;
+}
+.toggle.active {
+  background-color: black;
+}
+.toggle_ball.active {
+  background-color: white;
+  transform: translateX(-27px);
+}
+.popular_list_container.active {
+  background-color: white;
+}
+.nav-links-item.active {
+  color: black;
+  background-color: #27c3f867;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 940px) {
+  body {
+    overflow-x: hidden;
+  }
+  .nav_menu {
+    display: none;
+  }
+  .slider img {
+    object-fit: fill;
+    margin: 0;
+  }
+  .fetured_movies {
+    height: 70vh;
+    width: 80vw;
+    right: 30px;
+  }
+
+  .movie_list_container {
+    display: none;
+  }
+  .popular_list_container h1 {
+    margin-top: 30px;
+    margin-left: 7rem;
+    padding-left: 0;
+    font-size: 24px;
+    background-color: #3d3c3cb9;
+    color: #20a0ff;
+  }
+  .popular_list_wrapper {
+    margin-left: 160px;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .sidebar {
+    display: none;
+  }
+  .nav_logo {
+    position: absolute;
+    left: 0;
+  }
+  .search_container {
+    display: none;
+  }
+  .btn_login {
+    display: none;
+  }
+  .slider {
+    height: 40vh;
+  }
+  .slider img {
+    object-fit: fill;
+    height: 50vh;
+    position: relative;
+    bottom: 70px;
+    width: 100%;
+  }
+  .fetured_movies {
+    height: 20vh;
+    right: 30px;
+  }
+  .popular_list_container h1 {
+    margin-top: 6rem;
+  }
+  .text_content {
+    font-size: 12px;
+  }
+  .content_container {
+    width: 100%;
+  }
+  .nav_logo img {
+    width: 120px;
+    height: 35px;
+    margin-left: 10px;
+  }
+  .toggle {
+    margin-right: 120px;
+    width: 47px;
+    height: 20px;
+  }
+  .toggle_ball {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .slider {
+    height: 35vh;
+  }
+  .slider img {
+    object-fit: fill;
+    height: 35vh;
+    bottom: 6px;
+  }
+  .toggle {
+    margin-right: 10px;
+    width: 47px;
+    height: 20px;
+  }
+  .popular_list_container h1 {
+    font-size: 22px;
+  }
+  .popular_list_wrapper {
+    margin-left: 125px;
+  }
+  .text_content {
+    background: #209effad;
+  }
+}
