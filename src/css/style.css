@@ -69,11 +69,7 @@ body {
   font-size: 18px;
 }
 
-/* .nav-links > a {
-  display: inline-block;
-  padding: 13px 10px 13px 10px;
-  text-decoration: none;
-} */
+
 .nav-links-item {
   display: inline-block;
   padding: 13px 10px 13px 10px;
@@ -160,14 +156,7 @@ body {
   outline: 0;
   background-color: #3d3c3c;
 }
-/* .search_btn {
-    padding: 7px 10px;
-  
-    background: #ddd;
-    font-size: 15px;
-    border: none;
-    cursor: pointer;
-  } */
+
 .btn_container {
   margin-left: 50px;
 }
