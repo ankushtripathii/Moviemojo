@@ -86,16 +86,6 @@ toggleBall.addEventListener("click", () => {
 const API_KEY = "api_key=76a88025a60c7db7d6ef4a86b36b9e1e";
 const BASE_URL = "https://api.themoviedb.org/3";
 const searchUrl = BASE_URL + '/search/movie?' + API_KEY;
-// const API_URL = BASE_URL + "discover/movie?include_adult=false&include_video=false&language=en-US&page=1&sort_by=popularity.desc&with_release_type=2|3&release_date.gte={min_date}&release_date.lte={max_date}&" + API_KEY;
-
-// getMovies(API_URL);
-// function getMovies(url) {
-//   fetch(url).then(res => res.json()).then(data => {
-//     console.log(data)
-//   }).catch(err => {
-//     console.log(err)
-//   })
-// }
 
 const options = {
   method: 'GET',
@@ -118,7 +108,7 @@ fetch('https://api.themoviedb.org/3/movie/now_playing', options)
   .then(data => {
     // console.log(data);
     showMovies(data.results)
-    // featureMovies(data.results)
+    
   }).catch(err => console.error(err));
 
 
@@ -141,7 +131,7 @@ function showMovies(data) {
 }
 
 // POPULAR
-// const searchUrl = "https://api.themoviedb.org/3/search/movie";
+
 const API_URL = "https://api.themoviedb.org/3/movie/popular"
 
 getMovies(API_URL)
@@ -258,13 +248,7 @@ function closeNav() {
 const searchForm = document.getElementById("search_bar")
 const search = document.getElementById("search")
 
-// fetch('https://api.themoviedb.org/3/search/movie', options)
-//   .then(response => response.json())
-//   .then(response => {
-//     console.log(response)
-//     searchMovie(response)
-//   })
-//   .catch(err => console.error(err));
+
 
 searchForm.addEventListener("submit", (e) => {
   e.preventDefault();
